@@ -8,9 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    min-width: 1024px;
     min-height: 100%;
-    background-color: ${Color['gray-0']};
 
     margin: 0;
     padding: 0;
@@ -20,6 +18,8 @@ const GlobalStyle = createGlobalStyle`
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    scrollbar-width: none;
   }
 
   button, button:active {
@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    margin: 0;
   }
 `;
 
