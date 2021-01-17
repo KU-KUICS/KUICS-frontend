@@ -15,6 +15,8 @@ module.exports = {
     models: './src/models',
     pages: './src/pages',
     styles: './src/styles',
+    utils: './src/utils',
+    hooks: './src/hooks',
   },
   // installOptions: {},
   // devOptions: {},
