@@ -13,6 +13,8 @@ const BackgroundTemplate = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  min-height: calc(100vh - 200px);
 `;
 
 const WidthTemplate = styled.div`

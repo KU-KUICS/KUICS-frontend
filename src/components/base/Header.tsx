@@ -46,15 +46,19 @@ const SideHeaderWrapper = styled.div`
   }
 `;
 
-const HeaderLink = styled(Link)`
+interface HeaderLinkProps {
+  isLogo?: boolean;
+}
+
+const HeaderLink = styled(Link)<HeaderLinkProps>`
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 35px;
 
-  font-size: 14px;
-  font-weight: 600;
+  font-size: ${(p) => (p.isLogo ? '16px' : '14px')};
+  font-weight: ${(p) => (p.isLogo ? '800' : '600')};
   border-radius: 4px;
   padding: 0 11px;
 
@@ -103,7 +107,9 @@ const Header: React.FC = () => {
     <HeaderWrapper isScroll={!!scroll}>
       <HeaderBlock>
         <SideHeaderWrapper>
-          <Title>KUICS</Title>
+          <HeaderLink to="/" isLogo>
+            KUICS
+          </HeaderLink>
           <HeaderLink to="/notice">공지사항</HeaderLink>
           <HeaderLink to="/board">게시판</HeaderLink>
         </SideHeaderWrapper>
