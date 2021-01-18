@@ -12,6 +12,7 @@ const HistoryWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
+  padding: 0 48px;
   margin: 0 auto;
   height: 800px;
   width: 100%;
