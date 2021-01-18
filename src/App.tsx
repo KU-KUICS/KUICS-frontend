@@ -1,17 +1,21 @@
 import React from 'react';
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
-import MainPage from 'pages/MainPage';
+import { Switch, Route } from 'react-router-dom';
+
 import GlobalStyle from 'styles/GlobalStyle';
+
+import MainPage from 'pages/MainPage';
+import BoardPage from 'pages/BoardPage';
+import BoardPostPage from 'pages/BoardPostPage';
 
 const App: React.FC = () => {
   return (
     <>
       <GlobalStyle />
-      <Router>
-        <Switch>
-          <Route component={MainPage} path="/" exact />
-        </Switch>
-      </Router>
+      <Switch>
+        <Route component={MainPage} path="/" exact />
+        <Route component={BoardPostPage} path="/board/:postId" />
+        <Route component={BoardPage} path="/board" exact />
+      </Switch>
     </>
   );
 };
