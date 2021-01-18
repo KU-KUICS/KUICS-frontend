@@ -31,10 +31,10 @@ class BoardApi extends Api {
       .build();
   };
 
-  writePost = (id: number, postData: any): AxiosPromise => {
+  writePost = (postData: any): AxiosPromise => {
     return ApiBuilder.create()
       .post()
-      .url(this.endPoints.WRITE_BOARD_POST(id))
+      .url(this.endPoints.WRITE_BOARD_POST)
       .data(postData)
       .build();
   };
