@@ -20,6 +20,8 @@ const HeaderWrapper = styled.header<HeaderWrapperProps>`
     css`
       background-color: rgba(255, 255, 255, 0.8);
     `}
+
+  z-index: 20;
 `;
 
 const HeaderBlock = styled.div`
@@ -31,10 +33,6 @@ const HeaderBlock = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const Title = styled.div`
-  font-weight: 800;
 `;
 
 const SideHeaderWrapper = styled.div`
