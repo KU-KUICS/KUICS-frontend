@@ -39,6 +39,11 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
+
+    ::selection {
+      background: #343a40;
+      color: #f1f3f5;
+    }
   }
 `;
 
