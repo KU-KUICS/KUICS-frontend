@@ -18,6 +18,7 @@ module.exports = {
     utils: './src/utils',
     hooks: './src/hooks',
   },
+  routes: [{ match: 'routes', src: '.*', dest: '/index.html' }],
   // installOptions: {},
   // devOptions: {},
   // buildOptions: {},
