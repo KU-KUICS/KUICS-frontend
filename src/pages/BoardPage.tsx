@@ -27,7 +27,7 @@ const BoardPage: React.FC = () => {
       <Header />
       <BackgroundTemplate>
         <WidthTemplate>
-          <BoardTop />
+          <BoardTop boardName="게시판" />
           <BoardList />
         </WidthTemplate>
       </BackgroundTemplate>
