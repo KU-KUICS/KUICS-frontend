@@ -1,13 +1,30 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import HistoryItem from './HistoryItem';
 
-const ListWrapper = styled.ul`
+const ListAnimation = keyframes`
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+`;
+
+const ListAnimationWrapper = styled.div`
+  animation-duration: 18s;
+  animation-name: ${ListAnimation};
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+`;
+
+const ListWrapper = styled.div`
   width: 100%;
-  max-width: 760px;
+  max-width: 790px;
 
   overflow: hidden;
-  overflow-y: scroll;
+  padding: 0 30px;
 
   height: 500px;
 
@@ -49,9 +66,22 @@ const historyArray: History[] = [
 const HistoryList: React.FC = () => {
   return (
     <ListWrapper>
-      {historyArray.map((item) => (
-        <HistoryItem key={item.date} date={item.date} content={item.content} />
-      ))}
+      <ListAnimationWrapper>
+        {historyArray.map((item) => (
+          <HistoryItem
+            key={item.date}
+            date={item.date}
+            content={item.content}
+          />
+        ))}
+        {historyArray.map((item) => (
+          <HistoryItem
+            key={item.date}
+            date={item.date}
+            content={item.content}
+          />
+        ))}
+      </ListAnimationWrapper>
     </ListWrapper>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Color from 'utils/ColorPalette';
 
-const ItemWrapper = styled.li`
+const ItemWrapper = styled.div`
   padding: 20px 20px;
   border-radius: 16px;
 
@@ -12,9 +12,7 @@ const ItemWrapper = styled.li`
   display: flex;
   align-items: center;
 
-  & + & {
-    margin-top: 26px;
-  }
+  margin-top: 26px;
 `;
 
 const ItemDate = styled.div`

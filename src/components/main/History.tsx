@@ -21,7 +21,7 @@ const HistoryWrapper = styled.div`
 `;
 
 const HistoryTitle = styled.p`
-  font-weight: 800;
+  font-weight: 600;
   font-size: 2rem;
 
   text-align: center;
