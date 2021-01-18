@@ -104,7 +104,6 @@ const Header: React.FC = () => {
       <HeaderBlock>
         <SideHeaderWrapper>
           <Title>KUICS</Title>
-          <HeaderLink to="/about">소개</HeaderLink>
           <HeaderLink to="/announcement">공지사항</HeaderLink>
           <HeaderLink to="/board">게시판</HeaderLink>
         </SideHeaderWrapper>
