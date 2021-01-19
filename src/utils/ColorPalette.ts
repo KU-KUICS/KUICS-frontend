@@ -1,4 +1,4 @@
-const enum Color {
+enum Color {
   'white' = '#fff',
   'gray-0' = '#f8f9fa',
   'gray-2' = '#e9ecef',
