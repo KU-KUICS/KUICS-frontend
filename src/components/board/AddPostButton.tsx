@@ -17,6 +17,14 @@ const AddPostButton = styled.button`
   border-radius: 25px;
   background: #b2f2bb;
   color: #2b8a3e;
+
+  :hover {
+    background: #8ce99a;
+  }
+
+  :active {
+    background: #69db7c;
+  }s
 `;
 
 export default AddPostButton;

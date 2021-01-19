@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
     scrollbar-width: none;
   }
 
-  button, button:active {
+  textarea, button, button:active {
+    resize: none;
     outline: none;
     border: none;
 
@@ -34,6 +35,14 @@ const GlobalStyle = createGlobalStyle`
   a, a:visited {
     color: inherit;
     text-decoration: none;
+  }
+
+  input, textarea {
+    border: none;
+
+    :focus {
+      outline: none;
+    }
   }
 
   * {
