@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import Color from 'utils/ColorPalette';
 import AddPostButton from './AddPostButton';
@@ -19,7 +20,6 @@ const BoardLayoutWrapper = styled.div`
 
   margin: 48px auto;
   margin-bottom: 24px;
-  max-width: 900px;
   width: 100%;
 `;
 
@@ -59,7 +59,12 @@ const ListRow = styled.tr`
   }
 `;
 
-const BoardListTable: React.FC = () => {
+const BoardListTable: React.FC<RouteComponentProps> = (
+  props: RouteComponentProps
+) => {
+  const { location } = props;
+  const boardPath = location.pathname.split('/')[1];
+
   return (
     <LayoutWrapper>
       <BoardLayoutWrapper>
@@ -81,7 +86,9 @@ const BoardListTable: React.FC = () => {
           {[...Array(10)].map((idx) => (
             <ListRow key={`notice${idx}`}>
               <td>1</td>
-              <td>테스트용 게시글입니다.</td>
+              <td>
+                <Link to={`${boardPath}/3`}>테스트용 게시글입니다.</Link>
+              </td>
               <td>KUICS 최용욱</td>
               <td>2020.07.03</td>
               <td>31</td>
@@ -95,4 +102,4 @@ const BoardListTable: React.FC = () => {
   );
 };
 
-export default BoardListTable;
+export default withRouter(BoardListTable);
