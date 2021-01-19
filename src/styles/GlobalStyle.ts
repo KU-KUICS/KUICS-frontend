@@ -45,6 +45,16 @@ const GlobalStyle = createGlobalStyle`
       color: #f1f3f5;
     }
   }
+
+  #root {
+    overflow-y: auto;
+  }
+
+  .tui-editor-contents {
+    font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+      'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
 `;
 
 export default GlobalStyle;
