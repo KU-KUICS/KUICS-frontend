@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header<HeaderWrapperProps>`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
 
   transition: all 0.3s ease;
   ${(p) =>

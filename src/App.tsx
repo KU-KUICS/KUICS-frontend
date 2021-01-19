@@ -7,6 +7,7 @@ import MainPage from 'pages/MainPage';
 import BoardPage from 'pages/BoardPage';
 import BoardPostPage from 'pages/BoardPostPage';
 import NoticePage from 'pages/NoticePage';
+import NotFoundPage from 'pages/NotFoundPage';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Route component={BoardPostPage} path="/board/:postId" />
         <Route component={BoardPage} path="/board" exact />
         <Route component={NoticePage} path="/notice" exact />
+        <Route component={NotFoundPage} />
       </Switch>
     </>
   );

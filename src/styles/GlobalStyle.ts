@@ -22,7 +22,8 @@ const GlobalStyle = createGlobalStyle`
     scrollbar-width: none;
   }
 
-  button, button:active {
+  textarea, button, button:active {
+    resize: none;
     outline: none;
     border: none;
 
@@ -36,6 +37,14 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  input, textarea {
+    border: none;
+
+    :focus {
+      outline: none;
+    }
+  }
+
   * {
     box-sizing: border-box;
     margin: 0;
@@ -44,6 +53,16 @@ const GlobalStyle = createGlobalStyle`
       background: #343a40;
       color: #f1f3f5;
     }
+  }
+
+  #root {
+    overflow-y: auto;
+  }
+
+  .tui-editor-contents {
+    font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+      'Droid Sans', 'Helvetica Neue', sans-serif;
   }
 `;
 
