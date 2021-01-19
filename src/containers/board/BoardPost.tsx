@@ -5,6 +5,15 @@ import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
+const PostWrapper = styled.div`
+  background-color: #fff;
+  padding: 24px;
+  margin: 24px 0;
+  border-radius: 14px;
+
+  box-shadow: rgba(20, 20, 20, 0.05) 0px 8px 16px 0px;
+`;
+
 interface BoardRouteParams {
   postId: string;
 }
@@ -24,8 +33,10 @@ const BoardPost: React.FC<BoardPostProps> = ({
   return (
     <>
       <BoardTop boardName={boardName === 'board' ? '게시판' : '공지사항'} />
-      <PostMeta />
-      <PostDetail />
+      <PostWrapper>
+        <PostMeta />
+        <PostDetail />
+      </PostWrapper>
     </>
   );
 };

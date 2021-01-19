@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const PostMetaWrapper = styled.div`
   width: 100%;
-  margin: 24px 0;
+  margin-bottom: 24px;
 `;
 
 const PostMeta: React.FC = () => {

@@ -5,7 +5,7 @@ import Color from 'utils/ColorPalette';
 
 const CommentWrapper = styled.div`
   padding: 14px;
-  border-radius: 15px;
+  border-radius: 14px;
   background: ${Color.white};
 
   display: flex;
