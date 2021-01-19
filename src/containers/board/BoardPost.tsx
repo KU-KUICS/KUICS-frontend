@@ -8,7 +8,7 @@ import styled from 'styled-components';
 const PostWrapper = styled.div`
   background-color: #fff;
   padding: 24px;
-  margin: 24px 0;
+  margin: 48px 0;
   border-radius: 14px;
 
   box-shadow: rgba(20, 20, 20, 0.05) 0px 8px 16px 0px;
