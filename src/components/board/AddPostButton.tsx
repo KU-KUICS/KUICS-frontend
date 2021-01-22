@@ -24,7 +24,7 @@ const AddPostButton = styled.button`
 
   :active {
     background: #69db7c;
-  }s
+  }
 `;
 
 export default AddPostButton;
