@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Footer from 'components/base/Footer';
 import Header from 'components/base/Header';
-import BoardPost from 'containers/board/BoardPost';
-import CommentContainer from 'containers/board/CommentContainer';
 import Color from 'utils/ColorPalette';
+import MyProfile from 'components/my/MyProfile';
+import MyTop from 'components/my/MyTop';
 
 const BackgroundTemplate = styled.div`
   background-color: ${Color['gray-0']};
@@ -24,14 +25,14 @@ const LayoutTemplate = styled.div`
   min-height: calc(100vh - 200px - 90px);
 `;
 
-const BoardPostPage: React.FC = () => {
+const MyPage: React.FC = () => {
   return (
     <>
       <Header />
       <BackgroundTemplate>
         <LayoutTemplate>
-          <BoardPost />
-          <CommentContainer />
+          <MyTop>개인정보 수정</MyTop>
+          <MyProfile />
         </LayoutTemplate>
       </BackgroundTemplate>
       <Footer />
@@ -39,4 +40,4 @@ const BoardPostPage: React.FC = () => {
   );
 };
 
-export default BoardPostPage;
+export default MyPage;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const AddPostButton = styled(Link)`
+const WritePostButton = styled.button`
   align-self: flex-end;
   margin-top: 24px;
 
@@ -28,4 +28,4 @@ const AddPostButton = styled(Link)`
   }
 `;
 
-export default AddPostButton;
+export default WritePostButton;

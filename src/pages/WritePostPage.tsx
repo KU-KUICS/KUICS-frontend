@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Footer from 'components/base/Footer';
 import Header from 'components/base/Header';
-import BoardPost from 'containers/board/BoardPost';
-import CommentContainer from 'containers/board/CommentContainer';
 import Color from 'utils/ColorPalette';
+import WritePost from 'components/post/WritePost';
 
 const BackgroundTemplate = styled.div`
   background-color: ${Color['gray-0']};
@@ -24,14 +24,13 @@ const LayoutTemplate = styled.div`
   min-height: calc(100vh - 200px - 90px);
 `;
 
-const BoardPostPage: React.FC = () => {
+const WritePostPage: React.FC = () => {
   return (
     <>
       <Header />
       <BackgroundTemplate>
         <LayoutTemplate>
-          <BoardPost />
-          <CommentContainer />
+          <WritePost />
         </LayoutTemplate>
       </BackgroundTemplate>
       <Footer />
@@ -39,4 +38,4 @@ const BoardPostPage: React.FC = () => {
   );
 };
 
-export default BoardPostPage;
+export default WritePostPage;

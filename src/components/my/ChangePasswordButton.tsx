@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const AddPostButton = styled(Link)`
+const ChangePasswordButton = styled.button`
   align-self: flex-end;
   margin-top: 24px;
 
-  width: 100px;
+  padding: 0 14px;
   height: 40px;
 
   line-height: 40px;
@@ -28,4 +28,4 @@ const AddPostButton = styled(Link)`
   }
 `;
 
-export default AddPostButton;
+export default ChangePasswordButton;

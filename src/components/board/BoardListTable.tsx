@@ -95,7 +95,7 @@ const BoardListTable: React.FC<RouteComponentProps> = (
             </ListRow>
           ))}
         </BoardListWrapper>
-        <AddPostButton>글쓰기</AddPostButton>
+        <AddPostButton to={`${boardPath}/write`}>글쓰기</AddPostButton>
       </BoardLayoutWrapper>
       <PaginationList paginationLength={10} currentPage={1} />
     </LayoutWrapper>
