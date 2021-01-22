@@ -39,6 +39,9 @@ const Address = styled.div`
 const Octocat = styled.a`
   margin-top: 20px;
   fill: #ced4da;
+
+  height: 30px;
+  width: 30px;
 `;
 
 const Footer: React.FC = () => {
