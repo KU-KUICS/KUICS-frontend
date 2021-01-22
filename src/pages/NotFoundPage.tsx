@@ -31,6 +31,7 @@ const MsgWrapper = styled.div`
   border-radius: 14px;
   width: 200px;
 
+  background-color: ${Color.white};
   box-shadow: rgba(20, 20, 20, 0.05) 0px 6px 16px 0px;
 `;
 
