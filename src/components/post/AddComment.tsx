@@ -24,6 +24,7 @@ const CommentButton = styled.button`
   border-radius: 14px;
   margin-left: 14px;
   font-size: 1rem;
+  font-weight: bold;
 
   background: #b2f2bb;
   color: #2b8a3e;
