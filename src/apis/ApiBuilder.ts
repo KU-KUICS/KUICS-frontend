@@ -62,12 +62,12 @@ class ApiBuilder {
     return this;
   }
 
-  public data(data: Record<string, unknown>): this {
+  public data(data: Record<string, any>): this {
     this._data = data;
     return this;
   }
 
-  public headers(headers: Record<string, unknown>): this {
+  public headers(headers: Record<string, any>): this {
     this._headers = {
       ...this._headers,
       ...headers,
@@ -75,7 +75,7 @@ class ApiBuilder {
     return this;
   }
 
-  public params(params: Record<string, unknown>): this {
+  public params(params: Record<string, any>): this {
     this._params = params;
     return this;
   }

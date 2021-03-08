@@ -7,20 +7,25 @@ const BOARD_API_PREFIX = `${config.API_HOST}/board`;
 
 class BoardApi extends Api {
   endPoints = {
-    FETCH_BOARD_ALL: `${BOARD_API_PREFIX}`,
+    FETCH_BOARD_ALL: (page: number): string =>
+      `${BOARD_API_PREFIX}/page/${page}`,
     FETCH_BOARD_DETAIL: (id: number): string => `${BOARD_API_PREFIX}/${id}`,
     WRITE_BOARD_POST: `${BOARD_API_PREFIX}`,
     EDIT_BOARD_POST: (id: number): string => `${BOARD_API_PREFIX}/${id}`,
+    RECOMMEND_BOARD_POST: (id: number): string =>
+      `${BOARD_API_PREFIX}/${id}/recommend`,
     WRITE_BOARD_COMMENT: (id: number): string =>
       `${BOARD_API_PREFIX}/${id}/comment`,
     EDIT_BOARD_COMMENT: (id: number, commentId: number): string =>
       `${BOARD_API_PREFIX}/${id}/comment/${commentId}`,
+    RECOMMEND_BOARD_COMMENT: (id: number, commentId: number): string =>
+      `${BOARD_API_PREFIX}/${id}/comment/${commentId}/recommend`,
   };
 
-  fetchBoardAll = (): AxiosPromise => {
+  fetchBoardPage = (page: number): AxiosPromise => {
     return ApiBuilder.create()
       .get()
-      .url(this.endPoints.FETCH_BOARD_ALL)
+      .url(this.endPoints.FETCH_BOARD_ALL(page))
       .build();
   };
 
@@ -28,6 +33,21 @@ class BoardApi extends Api {
     return ApiBuilder.create()
       .get()
       .url(this.endPoints.FETCH_BOARD_DETAIL(id))
+      .build();
+  };
+
+  editPost = (id: number, postData: any): AxiosPromise => {
+    return ApiBuilder.create()
+      .put()
+      .url(this.endPoints.EDIT_BOARD_POST(id))
+      .data(postData)
+      .build();
+  };
+
+  deletePost = (id: number): AxiosPromise => {
+    return ApiBuilder.create()
+      .delete()
+      .url(this.endPoints.EDIT_BOARD_POST(id))
       .build();
   };
 
@@ -39,18 +59,10 @@ class BoardApi extends Api {
       .build();
   };
 
-  editPost = (id: number, postData: any): AxiosPromise => {
+  recommendPost = (id: number): AxiosPromise => {
     return ApiBuilder.create()
       .post()
-      .url(this.endPoints.EDIT_BOARD_POST(id))
-      .data(postData)
-      .build();
-  };
-
-  deletePost = (id: number): AxiosPromise => {
-    return ApiBuilder.create()
-      .delete()
-      .url(this.endPoints.EDIT_BOARD_POST(id))
+      .url(this.endPoints.RECOMMEND_BOARD_POST(id))
       .build();
   };
 
@@ -68,7 +80,7 @@ class BoardApi extends Api {
     commentData: any
   ): AxiosPromise => {
     return ApiBuilder.create()
-      .post()
+      .put()
       .url(this.endPoints.EDIT_BOARD_COMMENT(id, commentId))
       .data(commentData)
       .build();
@@ -78,6 +90,13 @@ class BoardApi extends Api {
     return ApiBuilder.create()
       .delete()
       .url(this.endPoints.EDIT_BOARD_COMMENT(id, commentId))
+      .build();
+  };
+
+  recommendPostComment = (id: number, commentId: number): AxiosPromise => {
+    return ApiBuilder.create()
+      .post()
+      .url(this.endPoints.RECOMMEND_BOARD_COMMENT(id, commentId))
       .build();
   };
 }

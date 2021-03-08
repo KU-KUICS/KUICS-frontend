@@ -1,4 +1,4 @@
-import { AxiosPromise, AxiosResponse } from 'axios';
+import { AxiosPromise } from 'axios';
 import Api from './Api';
 import ApiBuilder from './ApiBuilder';
 import config from './config';

@@ -4,7 +4,7 @@ interface Config {
 
 const config: Record<string, Config> = {
   DEVELOPMENT: {
-    API_HOST: 'API_HOST_HERE',
+    API_HOST: 'http://158.247.197.156:4000/api',
   },
 };
 
