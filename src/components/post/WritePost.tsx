@@ -1,8 +1,9 @@
 import { Editor } from '@toast-ui/react-editor';
 import React from 'react';
 import styled from 'styled-components';
-import WritePostButton from 'components/board/WritePostButton';
 import { useHistory } from 'react-router-dom';
+
+import WritePostButton from 'components/board/WritePostButton';
 
 const WritePostWrapper = styled.div`
   padding: 24px;

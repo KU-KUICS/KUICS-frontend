@@ -1,7 +1,8 @@
-import useScrollDetect from 'hooks/useScrollDetect';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
+
+import useScrollDetect from 'hooks/useScrollDetect';
 import Color from 'utils/ColorPalette';
 
 interface HeaderWrapperProps {

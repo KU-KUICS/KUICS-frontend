@@ -1,8 +1,9 @@
-import Footer from 'components/base/Footer';
-import Header from 'components/base/Header';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
+import Header from 'components/base/Header';
+import Footer from 'components/base/Footer';
 import Color from 'utils/ColorPalette';
 
 const BackgroundTemplate = styled.div`

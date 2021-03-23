@@ -1,9 +1,11 @@
-import BoardTop from 'components/board/BoardTop';
-import PostDetail from 'components/post/PostDetail';
-import PostMeta from 'components/post/PostMeta';
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
+
+import BoardTop from 'components/board/BoardTop';
+import PostDetail from 'components/post/PostDetail';
+import PostMeta from 'components/post/PostMeta';
+
 import EditPostButton from './EditPostButton';
 
 const PostLayoutWrapper = styled.div`

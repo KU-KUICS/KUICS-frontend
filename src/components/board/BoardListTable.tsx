@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
+
 import Color from 'utils/ColorPalette';
+
 import AddPostButton from './AddPostButton';
 import PaginationList from './PaginationList';
 

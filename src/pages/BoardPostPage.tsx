@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Footer from 'components/base/Footer';
 import Header from 'components/base/Header';
 import BoardPost from 'containers/board/BoardPost';

@@ -1,5 +1,6 @@
-import BoardListTable from 'components/board/BoardListTable';
 import React from 'react';
+
+import BoardListTable from 'components/board/BoardListTable';
 
 const BoardList: React.FC = () => {
   return <BoardListTable />;

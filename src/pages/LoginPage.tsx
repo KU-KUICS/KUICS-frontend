@@ -2,18 +2,16 @@ import React from 'react';
 
 import Footer from 'components/base/Footer';
 import Header from 'components/base/Header';
-import History from 'components/main/History';
-import Intro from 'components/main/Intro';
+import PageTemplate from 'components/base/PageTemplate';
 
-const MainPage: React.FC = () => {
+const LoginPage: React.FC = () => {
   return (
     <>
       <Header />
-      <Intro />
-      <History />
+      <PageTemplate />
       <Footer />
     </>
   );
 };
 
-export default MainPage;
+export default LoginPage;

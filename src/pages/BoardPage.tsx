@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Header from 'components/base/Header';
 import Footer from 'components/base/Footer';
 import BoardTop from 'components/board/BoardTop';

@@ -1,15 +1,16 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import GlobalStyle from 'styles/GlobalStyle';
-
-import MainPage from 'pages/MainPage';
 import BoardPage from 'pages/BoardPage';
 import BoardPostPage from 'pages/BoardPostPage';
-import NoticePage from 'pages/NoticePage';
-import NotFoundPage from 'pages/NotFoundPage';
-import WritePostPage from 'pages/WritePostPage';
+import MainPage from 'pages/MainPage';
 import MyPage from 'pages/MyPage';
+import NotFoundPage from 'pages/NotFoundPage';
+import NoticePage from 'pages/NoticePage';
+import WritePostPage from 'pages/WritePostPage';
+import GlobalStyle from 'styles/GlobalStyle';
+import LoginPage from 'pages/LoginPage';
+
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <Route component={BoardPage} path="/board" exact />
         <Route component={NoticePage} path="/notice" exact />
         <Route component={MyPage} path="/my" exact />
+        <Route component={LoginPage} path="/login" exact />
         <Route component={NotFoundPage} />
       </Switch>
     </>

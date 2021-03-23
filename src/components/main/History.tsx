@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Color from 'utils/ColorPalette';
+
 import HistoryList from './HistoryList';
 
 const BackgroundWrapper = styled.div`

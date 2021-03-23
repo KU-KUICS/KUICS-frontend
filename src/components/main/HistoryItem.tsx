@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import Color from 'utils/ColorPalette';
 
 const ItemWrapper = styled.div`

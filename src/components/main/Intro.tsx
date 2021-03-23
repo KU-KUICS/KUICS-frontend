@@ -1,6 +1,7 @@
-import PageTemplate from 'components/base/PageTemplate';
 import React from 'react';
 import styled from 'styled-components';
+
+import PageTemplate from 'components/base/PageTemplate';
 
 const IntroWrapper = styled.div`
   display: flex;

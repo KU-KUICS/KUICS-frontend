@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+
 import Color from 'utils/ColorPalette';
 
 const ListWrapper = styled.div`
