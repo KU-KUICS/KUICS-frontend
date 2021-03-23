@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import React, {useState} from 'react';
+import {Link, useHistory} from 'react-router-dom';
+import styled, {css} from 'styled-components';
 
 import useScrollDetect from 'hooks/useScrollDetect';
 import Color from 'utils/ColorPalette';
@@ -16,7 +16,7 @@ const HeaderWrapper = styled.header<HeaderWrapperProps>`
   width: 100%;
 
   transition: all 0.3s ease;
-  ${(p) =>
+  ${p =>
     p.isScroll &&
     css`
       background-color: rgba(255, 255, 255, 0.8);
@@ -41,7 +41,7 @@ const SideHeaderWrapper = styled.div`
   align-items: center;
 
   * + * {
-    margin-left: 35px;
+    margin-left: 24px;
   }
 `;
 
@@ -56,8 +56,8 @@ const HeaderLink = styled(Link)<HeaderLinkProps>`
   justify-content: center;
   height: 35px;
 
-  font-size: ${(p) => (p.isLogo ? '16px' : '14px')};
-  font-weight: ${(p) => (p.isLogo ? '800' : '600')};
+  font-size: ${p => (p.isLogo ? '16px' : '14px')};
+  font-weight: ${p => (p.isLogo ? '800' : '600')};
   border-radius: 4px;
   padding: 0 11px;
 
@@ -85,8 +85,7 @@ const LoginButton = styled.button`
   cursor: pointer;
 
   background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 3px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset;
 
   :active {
     background-color: ${Color['gray-2']};
@@ -95,9 +94,15 @@ const LoginButton = styled.button`
 
 const Header: React.FC = () => {
   const [scroll, setScroll] = useState(0);
+  const history = useHistory();
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScroll(position);
+  };
+
+  const handleClick = () => {
+    history.push('/login');
   };
 
   useScrollDetect(handleScroll);
@@ -112,7 +117,9 @@ const Header: React.FC = () => {
           <HeaderLink to="/notice">공지사항</HeaderLink>
           <HeaderLink to="/board">게시판</HeaderLink>
         </SideHeaderWrapper>
-        <LoginButton type="button">로그인</LoginButton>
+        <LoginButton type="button" onClick={handleClick}>
+          로그인
+        </LoginButton>
       </HeaderBlock>
     </HeaderWrapper>
   );
